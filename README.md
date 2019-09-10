@@ -30,7 +30,17 @@ $ git clone https://KeisukeYamashita/notifyer
 $ make install
 ```
 
-## Support
+## Sample Usage
+
+Post message to slack.
+
+```
+cat message.txt | notifyer slack
+```
+
+See below for detailed usage and supported services.
+
+## Supports
 
 <br />
 <p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><img width="100%"src="_docs/img/notifyer_app.png"></a></p>
