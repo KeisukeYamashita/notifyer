@@ -87,7 +87,7 @@ echo "Hello fron Notifyer" | notifyer slack
 echo "Hello fron Notifyer" | notifyer linebot
 ```
 
-### Disocrd
+### Discord
 
 ```
 echo "Hello fron Notifyer" | notifyer discord
