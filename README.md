@@ -93,6 +93,14 @@ echo "Hello fron Notifyer" | notifyer linebot
 echo "Hello fron Notifyer" | notifyer discord
 ```
 
+### Docker mode
+
+Also docker images are supported.
+
+```
+echo "Hello from Notifyer" | docker run  -v $HOME/.notifyer.toml:/root/.notifyer.toml notifyer:0.1.0 slack 
+```
+
 ## Contribution
 
 * I welcome your contributions.

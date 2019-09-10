@@ -46,7 +46,10 @@ func (c *CLI) Execute(args []string) int {
 	}
 	log.Printf("%s init", provider)
 
-	b, _ := ioutil.ReadAll(c.InputSteam)
+	b, err := ioutil.ReadAll(c.InputSteam)
+	if err != nil {
+		log.Fatalf("%s faield to read input: %v", provider, err)
+	}
 
 	if err := providerService.Send(string(b)); err != nil {
 		log.Fatalf("%s sent failed: %v", provider, err)
