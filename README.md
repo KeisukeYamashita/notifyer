@@ -98,7 +98,7 @@ echo "Hello fron Notifyer" | notifyer discord
 Also docker images are supported.
 
 ```
-echo "Hello from Notifyer" | docker run  -v $HOME/.notifyer.toml:/root/.notifyer.toml notifyer:0.1.0 slack 
+echo "Hello from Notifyer" | docker run  -v $HOME/.notifyer.toml:/root/.notifyer.toml 1915keke/notifyer:0.1.0 slack 
 ```
 
 ## Contribution
