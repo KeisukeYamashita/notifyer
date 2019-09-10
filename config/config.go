@@ -12,10 +12,10 @@ var (
 )
 
 type TomlConfig struct {
-	Default              string
-	Discord              *DiscordServiceConfig
-	SlackIncomingWebhook *SlackIncomingWebhookConfig
-	Linebot              *LineBotServiceConfig
+	Default string
+	Discord *DiscordServiceConfig
+	Slack   *SlackConfig
+	Linebot *LineBotServiceConfig
 }
 
 type ServiceConfig interface {
@@ -35,9 +35,9 @@ func importConfig() map[string]func() (ServiceConfig, error) {
 
 	// TODO(KeisukeYamahita): Use GetName() for keys
 	for name, config := range map[string]func() (ServiceConfig, error){
-		"discord":              newDiscordConfig,
-		"slackIncomingWebhook": newSlackIncomingWebhookConfig,
-		"linebot":              newLineBotConfig,
+		"discord": newDiscordConfig,
+		"slack":   newSlackConfig,
+		"linebot": newLineBotConfig,
 	} {
 		configs[name] = config
 	}

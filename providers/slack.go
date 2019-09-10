@@ -8,16 +8,16 @@ import (
 )
 
 // SlackIncomingWebhookProviderService ...
-type SlackIncomingWebhookProviderService struct {
+type SlackProviderService struct {
 	Config config.ServiceConfig
 }
 
 // GetName ...
-func (*SlackIncomingWebhookProviderService) GetName() string {
-	return "slackIncomingWebhook"
+func (*SlackProviderService) GetName() string {
+	return "slack"
 }
 
-func (ps *SlackIncomingWebhookProviderService) Init() error {
+func (ps *SlackProviderService) Init() error {
 	var err error
 	if ps.Config, err = config.NewConfig(ps.GetName()); err != nil {
 		return err
@@ -25,10 +25,10 @@ func (ps *SlackIncomingWebhookProviderService) Init() error {
 	return nil
 }
 
-func (ps *SlackIncomingWebhookProviderService) Send(msg string) error {
-	conf := &config.SlackIncomingWebhookConfig{}
+func (ps *SlackProviderService) Send(msg string) error {
+	conf := &config.SlackConfig{}
 	switch v := ps.Config.(type) {
-	case *config.SlackIncomingWebhookConfig:
+	case *config.SlackConfig:
 		conf = v
 	default:
 		return errors.New("no type")

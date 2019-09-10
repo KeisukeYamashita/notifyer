@@ -32,15 +32,15 @@ Currently supports sdtin only.
     <th>Status</th>
   </tr>
   <tr>
-    <td>Slack Incoming Webhook</td>
+    <td>Discord</td>
     <td>○</td>
   </tr>
   <tr>
-    <td>Slack API</td>
+    <td>Slack</td>
     <td>○</td>
   </tr>
   <tr>
-    <td>Discord Webhook</td>
+    <td>Line</td>
     <td>○</td>
   </tr>
 </table>

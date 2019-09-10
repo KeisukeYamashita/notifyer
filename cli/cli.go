@@ -61,7 +61,7 @@ func providerSevicesImport() map[string]func() providers.ProviderSevice {
 
 	for _, providerGen := range []func() providers.ProviderSevice{
 		newDiscordProvider,
-		newSlackIncomingWebhookProvider,
+		newSlackProvider,
 		newLineBotProvider,
 	} {
 		list[providerGen().GetName()] = providerGen
@@ -74,8 +74,8 @@ func newDiscordProvider() providers.ProviderSevice {
 	return &providers.DiscordProviderService{}
 }
 
-func newSlackIncomingWebhookProvider() providers.ProviderSevice {
-	return &providers.SlackIncomingWebhookProviderService{}
+func newSlackProvider() providers.ProviderSevice {
+	return &providers.SlackProviderService{}
 }
 
 func newLineBotProvider() providers.ProviderSevice {
