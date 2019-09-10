@@ -1,9 +1,11 @@
 VERSION := 0.1.0
 SERVICE_NAME := $(shell grep "^module" go.mod | rev | cut -d "/" -f1 | rev)
 
+export GO111MODULE=on
+
 .PHONY: install
 install: build
-	@cp bin/notifyer /usr/local/bin
+	@sudo cp bin/notifyer /usr/local/bin
 
 .PHONY: build
 build:
