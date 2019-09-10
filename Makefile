@@ -5,7 +5,6 @@ export GO111MODULE=on
 
 .PHONY: install
 install: build
-	@sudo cp bin/notifyer /usr/local/bin
 
 .PHONY: build
 build:
