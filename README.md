@@ -53,10 +53,11 @@ $ GO111MODULE=on go get github.com/KeisukeYamashita/notify_discord
 
 ## Usage
 
-## Config file
+### Config file
 
 The script will check the following files for configuration.
 
+1. `NOTIFYER_PATH` env var
 1. `$HOME/.notify_discord`
 
 The config toml file should be in this format.
@@ -72,6 +73,24 @@ to          = ""
 
 [discord]
 url         = "https://"
+```
+
+### Slack
+
+```
+echo "Hello fron Notifyer" | notifyer slack
+```
+
+###  Line
+
+```
+echo "Hello fron Notifyer" | notifyer linebot
+```
+
+### Disocrd
+
+```
+echo "Hello fron Notifyer" | notifyer discord
 ```
 
 ## Contribution
