@@ -1,6 +1,10 @@
 VERSION := 0.1.0
 SERVICE_NAME := $(shell grep "^module" go.mod | rev | cut -d "/" -f1 | rev)
 
+.PHONY: install
+install: build
+	@cp bin/notifyer /usr/local/bin
+
 .PHONY: build
 build:
 	CGO_ENABLED=0 go build -o bin/notifyer \
