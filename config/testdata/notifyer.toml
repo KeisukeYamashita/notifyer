@@ -1,0 +1,8 @@
+[slackIncomingWebhook]
+url = "https://hooks.slack.com"
+
+[discord]
+url = "https://discordapp.com/api/webhooks"
+
+[linebot]
+access_token = ""
