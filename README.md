@@ -14,6 +14,22 @@
 
 `notifyer` is a notification tool written in golang. It will read stdin and sends notification to services such as Slack, Discord and so on. You will have to configure by writting TOML file. Don't worry, it is very very simple to configure and to use.
 
+## Install
+
+### homebrew
+
+```
+$ brew tap KeisukeYamashita/notifyer
+$ brew install notifyer
+```
+
+### git
+
+```
+$ git clone https://KeisukeYamashita/notifyer
+$ make install
+```
+
 ## Support
 
 <br />
@@ -44,12 +60,6 @@ Currently supports sdtin only.
     <td>○</td>
   </tr>
 </table>
-
-## Install
-
-```
-$ GO111MODULE=on go get github.com/KeisukeYamashita/notify_discord
-```
 
 ## Usage
 
