@@ -16,6 +16,10 @@ type CLI struct {
 
 // NewCLI ...
 func NewCLI(outStream, errStream io.Writer, inputStream io.Reader) *CLI {
+	if inputStream == nil {
+		log.Fatal("no input stream. please pipe input")
+	}
+
 	return &CLI{
 		OutStream:   outStream,
 		ErrorStream: errStream,
